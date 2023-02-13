@@ -1,5 +1,5 @@
 <script setup>
-import { useRouter } from "vue-router";
+// import { useRouter } from "vue-router";
 </script>
 
 <template>
@@ -38,7 +38,7 @@ import { useRouter } from "vue-router";
       color: rgb(30, 109, 179);
       transition: ease-in-out 0.15s;
       &:hover {
-        color: rgb(46, 46, 46);
+        color: #79717A;
       }
       &:active {
         color: white;
