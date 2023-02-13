@@ -5,11 +5,10 @@ import { useRouter } from "vue-router";
 <template>
   <nav v-bind:class="$style.navbarContainer">
     <ul>
-          <router-link to="/">Home</router-link>
-      
-      <li>Projects</li>
-          <router-link to="/about">About</router-link>
+      <router-link to="/">Home</router-link>
 
+      <li><a href="#"> Projects</a></li>
+      <router-link to="/about">About</router-link>
     </ul>
   </nav>
 </template>
@@ -23,18 +22,29 @@ import { useRouter } from "vue-router";
 }
 
 .navbarContainer {
-  background-color: tomato;
-  /* height: 5rem; */
   border-bottom: 3px solid black;
   ul {
     @include flex-jc-ai-dir(space-between, flex-end, row);
     li {
-      font-size: 1.5rem;
-      list-style: none;
+      font-size: 2rem; // this is only for "Projects" in navbar
       margin-bottom: -1rem;
+      list-style: none;
+    }
+    a {
+      text-decoration: none;
+      font-size: 2rem;
+      margin-bottom: -1rem; // this margin doesnt apply to <a>"Projects"
+      font-weight: 600;
+      color: rgb(30, 109, 179);
+      transition: ease-in-out 0.15s;
+      &:hover {
+        color: rgb(46, 46, 46);
+      }
+      &:active {
+        color: white;
+      }
     }
     :nth-child(3) {
-      /* color: green; */
       margin-right: 1.7em;
     }
   }
