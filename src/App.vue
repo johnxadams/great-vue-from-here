@@ -21,5 +21,13 @@ import navbar from "./components/navbar.vue";
   align-items: $ai;
   flex-direction: $dir;
 }
-
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #947169;
+}
 </style>

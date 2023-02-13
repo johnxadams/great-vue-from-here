@@ -4,6 +4,7 @@
   <nav v-bind:class="$style.navbarContainer">
     <ul>
       <li>Home</li>
+      <li>Projects</li>
       <li>About</li>
     </ul>
   </nav>
@@ -19,17 +20,19 @@
 
 .navbarContainer {
   background-color: tomato;
+  /* height: 5rem; */
+  border-bottom: 3px solid black;
   ul {
-    @include flex-jc-ai-dir(space-between, flex-start, row);
+    @include flex-jc-ai-dir(space-between, flex-end, row);
     li {
-      font-size: 3rem;
+      font-size: 1.5rem;
       list-style: none;
-      
+      margin-bottom: -1rem;
     }
-    :nth-child(2){
-          /* color: green; */
-          margin-right: 1em;
-      }
+    :nth-child(3) {
+      /* color: green; */
+      margin-right: 1.7em;
+    }
   }
 }
 </style>
