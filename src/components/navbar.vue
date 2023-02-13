@@ -1,11 +1,15 @@
-<script setup></script>
+<script setup>
+import { useRouter } from "vue-router";
+</script>
 
 <template>
   <nav v-bind:class="$style.navbarContainer">
     <ul>
-      <li>Home</li>
+          <router-link to="/">Home</router-link>
+      
       <li>Projects</li>
-      <li>About</li>
+          <router-link to="/about">About</router-link>
+
     </ul>
   </nav>
 </template>
