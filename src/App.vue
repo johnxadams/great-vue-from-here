@@ -14,6 +14,12 @@ import navbar from "./components/navbar.vue";
   <RouterView />
 </template>
 
-<style>
+<style lang="scss">
+@mixin flex-jc-ai-dir($jc, $ai, $dir) {
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+  flex-direction: $dir;
+}
 
 </style>
