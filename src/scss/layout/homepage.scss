@@ -4,6 +4,8 @@
 //     align-items: $ai;
 //     flex-direction: $dir;
 //   }
+@import "../abstract/mixins.scss";
+
   .projectSection {
     background-color: rgb(61, 126, 61);
     width: 80%;

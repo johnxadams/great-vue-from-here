@@ -15,7 +15,7 @@
 </template>
 
 <style module lang="scss">
-@import "../scss/layout/_layout.scss";
+@import "../scss/layout/homepage.scss";
 /* @mixin flex-jc-ai-dir($jc, $ai, $dir) {
   display: flex;
   justify-content: $jc;
