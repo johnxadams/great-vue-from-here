@@ -6,6 +6,6 @@
     Two
 </template>
 
-<style module lang="sass">
+<style module lang="scss">
 
 </style>
