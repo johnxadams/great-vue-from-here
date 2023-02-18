@@ -34,6 +34,10 @@ const addTodo = () => {
   inputContent.value = "";
 };
 
+const removeTodo = (todo) => {
+  todos.value = todos.value.filter((t) => t !== todo);
+};
+
 /**deep : is going to look into each individual array item of todo.value
  * and if any of it changes, deep will catch it and then the function
  * inside watch will be called again
@@ -80,6 +84,7 @@ onMounted(() => {
         <li v-for="(todo, index) in todos" :key="todo.id">
           <div>
             <input type="text" v-model="todo.content" />
+            <button @click="removeTodo(todo)">Delete</button>
           </div>
         </li>
       </ul>
