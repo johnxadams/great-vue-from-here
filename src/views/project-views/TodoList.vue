@@ -34,6 +34,18 @@ const addTodo = () => {
   inputContent.value = "";
 };
 
+/**deep : is going to look into each individual array item of todo.value
+ * and if any of it changes, deep will catch it and then the function
+ * inside watch will be called again
+ */
+watch(
+  todos,
+  (newValue) => {
+    localStorage.setItem("todos", JSON.stringify(newValue));
+  },
+  { deep: true }
+);
+
 watch(name, (newValue) => {
   localStorage.setItem("name", newValue);
 });
