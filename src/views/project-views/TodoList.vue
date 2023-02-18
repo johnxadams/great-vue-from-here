@@ -62,50 +62,40 @@ onMounted(() => {
 
 <template>
   <main :class="$style.todoListContainer">
-    Uno
-    <section class="create-todo">
+    <section :class="$style.createTodo">
       <h2>Get Stuff Done</h2>
       <h2 class="title">
         <!-- v-model: name is linked with const name ref('') -->
         Whats up, <input type="text" placeholder="Name here" v-model="name" />
       </h2>
-      <form @submit.prevent="addTodo">
+      <form @submit.prevent="addTodo" :class="$style.todoForm">
         <h4>What do you want to task?</h4>
         <input
           type="text"
           placeholder="e.g. continue vue tutorial"
           v-model="inputContent"
+          :class="$style.todoInputContent"
         />
-        <input type="submit" value="Add todo" />
+        <input type="submit" value="Add todo" :class="$style.addTodoBtn" />
       </form>
     </section>
-    <section :class="$style.todoList">
+    <section :class="$style.todoListRender">
       <ul>
         <li v-for="(todo, index) in todos" :key="todo.id">
           <div>
-            <input type="text" v-model="todo.content" />
-            <button @click="removeTodo(todo)">Delete</button>
+            <input
+              type="text"
+              v-model="todo.content"
+              :class="$style.renderedTodoInput"
+            />
+            <button @click="removeTodo(todo)" :class="$style.deleteTodoBtn">Delete</button>
           </div>
         </li>
       </ul>
-      <!-- <div v-for="(todo, index) in todos.value" :key="todo.id"> -->
-      <!-- {{ index }} {{ allTodos }} {{ todo }} -->
-
-      <!-- </div> -->
     </section>
-
-    <!-- <section :class="$style.example">
-<input type="text" v-model="exampleInputContent" />
-<button>Send</button>
-    </section> -->
   </main>
 </template>
 
 <style module lang="scss">
 @import "../../scss/layout/projects/todolist.scss";
-.example {
-  border: 3px red solid;
-  width: 15rem;
-  height: 5rem;
-}
 </style>
