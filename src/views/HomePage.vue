@@ -1,10 +1,21 @@
-<script setup></script>
+<script setup>
+import { Icon } from "@iconify/vue";
+</script>
 
 <template>
   <section :class="$style.projectSection">
     <router-link to="/todolist"
-      ><div :class="$style.projectCards">Project One</div></router-link
-    >
+      ><div :class="$style.projectCards">
+        <div :class="$style.projectNameArrowContainer">
+          <div :class="$style.projectNameContainer">Todo List</div>
+          <div :class="$style.projectArrowContainer">
+            <Icon :class="$style.arrowIcon"
+              icon="mdi:arrow-right-circle-outline"
+            
+            />
+          </div>
+        </div></div
+    ></router-link>
     <router-link to="/two"
       ><div :class="$style.projectCards">Project Two</div></router-link
     >
