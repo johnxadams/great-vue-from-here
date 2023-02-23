@@ -22,9 +22,9 @@ const addTodo = () => {
 
   todos.value.push({
     id: new Date().getTime(),
-
     content: inputContent.value,
-    // category: inputCategory.value,
+    category: inputCategory.value,
+    done: false,
   });
   console.log("todos.value: ", todos.value);
   // console.log("allTodos: ", allTodos);
@@ -76,19 +76,52 @@ onMounted(() => {
           v-model="inputContent"
           :class="$style.todoInputContent"
         />
+        <h4>Choose a category</h4>
+        <div :class="$style.options">
+          <label>
+            <input
+              type="radio"
+              name="category"
+              value="business"
+              v-model="inputCategory"
+            />
+            <span :class="[$style.bubble, $style.business]"></span>
+            <div>Business</div>
+
+            <input
+              type="radio"
+              name="category"
+              value="personal"
+              v-model="inputCategory"
+            />
+            <span :class="[$style.bubble, $style.personal]"></span>
+            <div>Personal</div>
+          </label>
+        </div>
         <input type="submit" value="Add todo" :class="$style.addTodoBtn" />
       </form>
     </section>
     <section :class="$style.todoListRender">
       <ul>
-        <li v-for="(todo, index) in todos" :key="todo.id">
+        <li
+          :class="[$style['todo-item'], $style[`${todo.done && 'done'}`]]"
+          v-for="(todo, index) in todos"
+          :key="todo.id"
+        >
+          <label>
+            <!-- input and span are visual rendering of the checkbox -->
+            <input type="checkbox" v-model="todo.done" />
+            <span :class="[$style.bubble, $style[`${todo.category}`]]"></span>
+          </label>
           <div>
             <input
               type="text"
               v-model="todo.content"
               :class="$style.renderedTodoInput"
             />
-            <button @click="removeTodo(todo)" :class="$style.deleteTodoBtn">Delete</button>
+            <button @click="removeTodo(todo)" :class="$style.deleteTodoBtn">
+              Delete
+            </button>
           </div>
         </li>
       </ul>

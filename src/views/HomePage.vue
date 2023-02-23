@@ -7,11 +7,14 @@ import { Icon } from "@iconify/vue";
     <router-link to="/todolist"
       ><div :class="$style.projectCards">
         <div :class="$style.projectNameArrowContainer">
-          <div :class="$style.projectNameContainer">My todo list <br> application</div>
+          <div :class="$style.projectNameContainer">
+            My todo list <br />
+            application
+          </div>
           <div :class="$style.projectArrowContainer">
-            <Icon :class="$style.arrowIcon"
+            <Icon
+              :class="$style.arrowIcon"
               icon="mdi:arrow-right-circle-outline"
-            
             />
           </div>
         </div></div
