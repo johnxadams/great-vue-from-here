@@ -1,6 +1,4 @@
-<script setup>
-// import { useRouter } from "vue-router";
-</script>
+<script setup></script>
 
 <template>
   <nav v-bind:class="$style.navbarContainer">

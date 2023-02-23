@@ -31,5 +31,6 @@ body {
   padding: 0;
   background-color: $mainDark;
   font-family: "Assistant";
+
 }
 </style>

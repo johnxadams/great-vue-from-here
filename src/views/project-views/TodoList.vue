@@ -9,8 +9,6 @@ const inputCategory = ref(null);
 // const exampleArr = ref([]);
 // const exampleInputContent = ref("");
 
-
-
 const addTodo = () => {
   if (inputContent.value.trim() === "" || inputCategory.value === null) {
     return;
@@ -21,7 +19,6 @@ const addTodo = () => {
     content: inputContent.value,
     category: inputCategory.value,
     done: false,
-    
   });
   console.log("todos.value: ", todos.value);
   // console.log("allTodos: ", allTodos);
@@ -30,8 +27,6 @@ const addTodo = () => {
 
   inputContent.value = "";
 };
-
-
 
 const removeTodo = (todo) => {
   todos.value = todos.value.filter((t) => t !== todo);
@@ -57,18 +52,16 @@ onMounted(() => {
   name.value = localStorage.getItem("name") || "";
   todos.value = JSON.parse(localStorage.getItem("todos")) || [];
 });
-
-
 </script>
 
 <template>
-  <main :class="$style.todoListContainer">
+  <div :class="$style.todoListContainer">
     <section :class="$style.createTodo">
-    <h2>Todo List</h2>
+      <h2>Todo List</h2>
       <!-- <h2>Get Stuff Done</h2>
       <h2 class="title"> -->
-        <!-- v-model: name is linked with const name ref('') -->
-        <!-- Whats up, 
+      <!-- v-model: name is linked with const name ref('') -->
+      <!-- Whats up, 
         <input type="text" placeholder="Name here" v-model="name" />
       </h2> -->
       <form @submit.prevent="addTodo" :class="$style.todoForm">
@@ -130,7 +123,7 @@ onMounted(() => {
         </li>
       </ul>
     </section>
-  </main>
+  </div>
 </template>
 
 <style module lang="scss">
