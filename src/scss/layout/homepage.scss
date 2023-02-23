@@ -4,43 +4,53 @@
 //     align-items: $ai;
 //     flex-direction: $dir;
 //   }
-@import "../abstract/mixins.scss";
+@import "../abstract/abstract-files.scss";
 
 .projectSection {
-  background-color: rgba(61, 126, 61, 0.397);
+  // background-color: $mainDark;
   width: 80%;
   height: 50vh;
   margin: 0 auto;
   @include flex-jc-ai-dir(space-between, center, row);
-  .projectCards {
-    background-color: tomato;
-    border-radius: 15px;
-    width: 23rem;
-    height: 11rem;
-    @include flex-jc-ai-dir(center, flex-end, row);
-    .projectNameArrowContainer {
-      border: 2px black dotted;
-      width: 90%;
-      margin: 0 0 1em 0;
-      @include flex-jc-ai-dir(space-between, center, row);
-      .projectNameContainer {
-        font-size: 2rem;
-        font-weight: 700;
-      }
-      .projectArrowContainer {
-        // background-color: chartreuse;
-        height: 3.5rem;
-        width: 3.5rem;
-        @include flex-jc-ai-dir(center, center, row);
-
-        .arrowIcon {
-          color: white;
-          font-size: 3rem;
-          &:hover {
-            color: blue;
+  flex-wrap: wrap;
+  a {
+    text-decoration: none;
+    .projectCards {
+      background-color: tomato;
+      border-radius: 15px;
+      width: 18.25rem;
+      height: 11rem;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+      @include flex-jc-ai-dir(center, flex-end, row);
+      
+      .projectNameArrowContainer {
+        border: 2px black dotted;
+        width: 90%;
+        margin: 0 0 1em 0;
+        @include flex-jc-ai-dir(space-between, center, row);
+       
+        .projectNameContainer {
+          font-size: 2rem;
+          font-weight: 700;
+            // text-decoration: none;
+            color: green;
+        }
+        .projectArrowContainer {
+          // background-color: chartreuse;
+          height: 3.5rem;
+          width: 3.5rem;
+          @include flex-jc-ai-dir(center, center, row);
+  
+          .arrowIcon {
+            color: white;
+            font-size: 3rem;
+            &:hover {
+              color: blue;
+            }
           }
         }
       }
     }
   }
+
 }

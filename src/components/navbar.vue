@@ -5,10 +5,14 @@
 <template>
   <nav v-bind:class="$style.navbarContainer">
     <ul>
-      <router-link to="/">Home</router-link>
+      <li>
+        <router-link to="/">Home</router-link>
+      </li>
 
       <li><a href="#"> Projects</a></li>
-      <router-link to="/about">About</router-link>
+      <li>
+        <router-link to="/about">About</router-link>
+      </li>
     </ul>
   </nav>
 </template>
@@ -38,7 +42,7 @@
       color: rgb(30, 109, 179);
       transition: ease-in-out 0.15s;
       &:hover {
-        color: #79717A;
+        color: #79717a;
       }
       &:active {
         color: white;

@@ -15,6 +15,7 @@ import navbar from "./components/navbar.vue";
 
 <style lang="scss">
 @import url("https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600;700;800&display=swap");
+@import "./scss/abstract/abstract-files.scss";
 @mixin flex-jc-ai-dir($jc, $ai, $dir) {
   display: flex;
   justify-content: $jc;
@@ -28,7 +29,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background-color: #2f3136;
+  background-color: $mainDark;
   font-family: "Assistant";
 }
 </style>

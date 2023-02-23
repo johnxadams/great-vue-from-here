@@ -35,7 +35,7 @@
           align-items: center;
           justify-content: center;
           padding: 1.5rem;
-          background-color: #fff;
+          background-color: rgba(255, 255, 255, 0.548);
           border-radius: 0.5rem;
           box-shadow: black 5px 5px 10px;
           cursor: pointer;
@@ -62,7 +62,7 @@
             box-shadow: 0px 0px 4px #c55311;
           }
           .bubble::after {
-            content: "bubble::after";
+            content: "";
             display: block;
             color: black;
             opacity: 1;
@@ -125,6 +125,48 @@
           margin-right: 1rem;
           cursor: pointer;
           // background-color: green;
+          input[type="checkbox"]{
+            display: none;
+          }
+          .bubble {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 2px solid #2f9b21;
+            box-shadow: 0px 0px 4px #2f9b21;
+          }
+          // .business {
+          //   border: 2px solid #2f9b21;
+          //   box-shadow: 0px 0px 4px #2f9b21;
+          // }
+          .bubble.personal {
+            border: 2px solid #c55311;
+            box-shadow: 0px 0px 4px #c55311;
+          }
+          .bubble::after {
+            content: "";
+            display: block;
+            color: black;
+            opacity: 1;
+            width: 0px;
+            height: 0px;
+            border: 2px solid #2f9b21;
+            box-shadow: 0px 0px 4px #2f9b21;
+            border-radius: 50%;
+            transition: 0.2s ease-in-out;
+          }
+          .bubble.personal::after {
+            border: 2px solid #c55311;
+            box-shadow: 0px 0px 4px #c55311;
+          }
+          input:checked ~ .bubble::after {
+            width: 10px;
+            height: 10px;
+            opacity: 1;
+          }
         }
         div {
           background-color: aliceblue;
