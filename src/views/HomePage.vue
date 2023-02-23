@@ -8,7 +8,7 @@ import { Icon } from "@iconify/vue";
       ><div :class="$style.projectCards">
         <div :class="$style.projectNameArrowContainer">
           <div :class="$style.projectNameContainer">
-            My todo list <br />
+            Todo list <br />
             application
           </div>
           <div :class="$style.projectArrowContainer">
@@ -20,10 +20,32 @@ import { Icon } from "@iconify/vue";
         </div></div
     ></router-link>
     <router-link to="/two"
-      ><div :class="$style.projectCards">Project Two</div></router-link
+      ><div :class="$style.projectCards"><div :class="$style.projectNameArrowContainer">
+          <div :class="$style.projectNameContainer">
+            Second <br />
+            application
+          </div>
+          <div :class="$style.projectArrowContainer">
+            <Icon
+              :class="$style.arrowIcon"
+              icon="mdi:arrow-right-circle-outline"
+            />
+          </div>
+        </div></div></router-link
     >
     <router-link to="/three"
-      ><div :class="$style.projectCards">Project Three</div></router-link
+      ><div :class="$style.projectCards"><div :class="$style.projectNameArrowContainer">
+          <div :class="$style.projectNameContainer">
+            Third <br />
+            application
+          </div>
+          <div :class="$style.projectArrowContainer">
+            <Icon
+              :class="$style.arrowIcon"
+              icon="mdi:arrow-right-circle-outline"
+            />
+          </div>
+        </div></div></router-link
     >
   </section>
 </template>

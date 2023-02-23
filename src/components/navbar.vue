@@ -18,6 +18,7 @@
 </template>
 
 <style module lang="scss">
+@import "../scss/abstract/abstract-files.scss";
 @mixin flex-jc-ai-dir($jc, $ai, $dir) {
   display: flex;
   justify-content: $jc;
@@ -28,16 +29,18 @@
 .navbarContainer {
   border-bottom: 3px solid black;
   ul {
-    @include flex-jc-ai-dir(space-between, flex-end, row);
+    @include flex-jc-ai-dir(flex-start, center, row);
     li {
       font-size: 2rem; // this is only for "Projects" in navbar
-      margin-bottom: -1rem;
+      margin: 0 1em -0.5em 0;
       list-style: none;
+      /* border: 2px black solid; */
+      text-shadow: $mainShadow;
     }
     a {
       text-decoration: none;
       font-size: 2rem;
-      margin-bottom: -1rem; // this margin doesnt apply to <a>"Projects"
+      //margin-bottom: -1rem; // this margin doesnt apply to <a>"Projects"
       font-weight: 600;
       color: rgb(30, 109, 179);
       transition: ease-in-out 0.15s;
@@ -49,7 +52,7 @@
       }
     }
     :nth-child(3) {
-      margin-right: 1.7em;
+      /* margin-right: 1.7em; */
     }
   }
 }

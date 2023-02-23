@@ -1,5 +1,5 @@
 <script setup></script>
 
-<template>Three</template>
+<template>Third application</template>
 
 <style module lang="sass"></style>

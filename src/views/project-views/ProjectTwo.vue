@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    Two
+    Second application
 </template>
 
 <style module lang="scss">
