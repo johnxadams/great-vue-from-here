@@ -1,0 +1,28 @@
+@import "../abstract/abstract-files.scss";
+
+.navbarContainer {
+  border-bottom: 3px solid black;
+  ul {
+    @include flex-jc-ai-dir(flex-start, center, row);
+    li {
+      font-size: 2rem; // this is only for "Projects" in navbar
+      margin: 0 1em -0.5em 0;
+      list-style: none;
+      /* border: 2px black solid; */
+      text-shadow: $mainShadow;
+    }
+    a {
+      text-decoration: none;
+      font-size: 2rem;
+      font-weight: 600;
+      color: rgb(30, 109, 179);
+      transition: ease-in-out 0.15s;
+      &:hover {
+        color: #79717a;
+      }
+      &:active {
+        color: white;
+      }
+    }
+  }
+}

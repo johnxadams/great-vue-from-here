@@ -1,19 +1,10 @@
-// @mixin flex-jc-ai-dir($jc, $ai, $dir) {
-//     display: flex;
-//     justify-content: $jc;
-//     align-items: $ai;
-//     flex-direction: $dir;
-//   }
 @import "../abstract/abstract-files.scss";
 
 .projectSection {
-  // background-color: $mainDark;
-  // border: 2px black dashed;
   max-width: 60rem;
   height: auto;
   margin: 7em auto;
   @include flex-jc-ai-dir(space-between, center, row);
-  // flex-wrap: wrap;
   a {
     text-decoration: none;
     .projectCards {
@@ -33,7 +24,6 @@
       }
 
       .projectNameArrowContainer {
-        // border: 2px black dotted;
         width: 90%;
         margin: 0 0 1em 0;
         text-shadow: $secondaryShadow;
@@ -42,11 +32,9 @@
         .projectNameContainer {
           font-size: 2rem;
           font-weight: 700;
-          // text-decoration: none;
           color: $secondaryDark;
         }
         .projectArrowContainer {
-          // background-color: chartreuse;
           height: 3.5rem;
           width: 3.5rem;
           @include flex-jc-ai-dir(center, center, row);
@@ -63,10 +51,6 @@
 
 @media only screen and (max-width: 920px) {
   .projectSection {
-    // background-color: $mainDark;
-    // @include flex-jc-ai-dir(space-between, center, column);
-
-
     a {
       .projectCards {
         width: 17rem;
@@ -78,7 +62,6 @@
 
 @media only screen and (max-width: 830px) {
   .projectSection {
-    // background-color: $mainDark;
     flex-direction: column;
     a {
       .projectCards {
