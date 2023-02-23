@@ -21,13 +21,14 @@
     .projectNameArrowContainer {
       border: 2px black dotted;
       width: 90%;
+      margin: 0 0 1em 0;
       @include flex-jc-ai-dir(space-between, center, row);
       .projectNameContainer {
         font-size: 2rem;
         font-weight: 700;
       }
       .projectArrowContainer {
-        background-color: chartreuse;
+        // background-color: chartreuse;
         height: 3.5rem;
         width: 3.5rem;
         @include flex-jc-ai-dir(center, center, row);
